@@ -58,8 +58,7 @@ execute as @a[tag=recodash] at @s run function keidoro:gogogo/waitrecovery
 #監視カメラ作っていくよぉぉぉお
 execute as @a[nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{sc:1}}},scores={wfrightclick=1..}] at @s run function keidoro:sc/setting
 #監視カメラにマーク。ちなみに倒すとエフェクトクリアされる。
-execute at @e[type=skeleton,tag=sc] as @a[team=thief] if entity @a[distance=..26,team=thief] positioned ~ ~8 ~ if entity @s[distance=..26] run effect give @s glowing 1000000 0 true
-execute at @e[type=skeleton,tag=sc] as @a[team=thief] unless entity @a[distance=..26,team=thief] positioned ~ ~8 ~ unless entity @s[distance=..26] run effect clear @s minecraft:glowing
+execute at @e[type=skeleton,tag=sc] as @a[team=thief] if entity @a[distance=..20,team=thief] positioned ~ ~8 ~ if entity @s[distance=..20] run effect give @s glowing 1 0 true
 
 
 
