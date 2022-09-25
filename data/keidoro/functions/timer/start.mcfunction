@@ -1,0 +1,1 @@
+scoreboard players set タイマースタート ootimescore 1

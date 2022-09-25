@@ -1,0 +1,139 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "name": "minecraft:warped_fungus_on_a_stick",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:5,sc:1}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "監視カメラ",
+                "color": "gray",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "右クリックで設置",
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "監視カメラを設置する",
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "35m以内に泥棒がいたら発光する。",
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "※泥棒は監視カメラをぶっ壊すことはできます。",
+                  "color": "red",
+                  "italic": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:empty",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "name": "minecraft:warped_fungus_on_a_stick",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:3,tg:1}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "テーザー銃",
+                "color": "yellow",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "泥棒をビビっとスタンさせるよ！",
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "スタン3秒と混乱30秒を与える。",
+                  "color": "white",
+                  "italic": false
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 2,
+                "max": 4
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 2,
+          "name": "minecraft:stone_axe",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{Damage:114645,CustomModelData:1,AttributeModifiers:[{AttributeName:\"generic.attack_damage\",Name:\"generic.attack_damage\",Amount:100,Operation:0,UUID:[I;182690051,2006076410,-1105826552,1655802307],Slot:\"mainhand\"}]}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "手錠",
+                "color": "gray",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "泥棒を一撃であそこいき",
+                  "color": "white",
+                  "italic": false
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

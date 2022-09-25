@@ -1,0 +1,27 @@
+[
+  {
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+      "type": "minecraft:player",
+      "equipment": {
+        "mainhand": {
+          "items": [
+            "minecraft:warped_fungus_on_a_stick"
+          ],
+          "nbt": "{dash:1}"
+        }
+      }
+    }
+  },
+  {
+    "condition": "minecraft:entity_scores",
+    "entity": "this",
+    "scores": {
+      "stamina": {
+        "min": 1,
+        "max": 160
+      }
+    }
+  }
+]

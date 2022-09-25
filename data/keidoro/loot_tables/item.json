@@ -1,0 +1,178 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:empty",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "name": "minecraft:emerald",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{money:1,CustomModelData:1}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "お金（100万円札）",
+                "color": "gold",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "100万...",
+                  "color": "gold",
+                  "italic": false
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "name": "minecraft:warped_fungus_on_a_stick",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:1,fe:1}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "消火器",
+                "color": "red",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "右クリックで使用",
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "初期消火で使える代物。警備側の足止めに使える",
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "ちなみに脛に当てるとごっつ痛い。",
+                  "color": "white"
+                },
+                {
+                  "text": "※混乱中は使用できません。",
+                  "color": "red",
+                  "italic": false
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 4,
+          "name": "minecraft:red_shulker_box",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:1,mk:1}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "医療キット",
+                "color": "white",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "SHIFTで使用",
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "一般的な医療道具が全部入ってる",
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "使用時間は長いが全回復するぞ！",
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "使用時間:8秒",
+                  "color": "white",
+                  "italic": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 2,
+          "name": "minecraft:warped_fungus_on_a_stick",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{CustomModelData:2,ed:1}"
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "text": "スターイオン",
+                "color": "yellow",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "lore": [
+                {
+                  "text": "右クリックで使用",
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "これ飲むと、飛ぶぞ",
+                  "color": "yellow",
+                  "italic": false
+                },
+                {
+                  "text": "スタミナが満タンになる",
+                  "color": "white",
+                  "italic": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

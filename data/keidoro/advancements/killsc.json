@@ -1,0 +1,32 @@
+{
+    "criteria": {
+      "killsc": {
+        "trigger": "minecraft:player_killed_entity",
+        "conditions": {
+          "player": [
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "team": "thief"
+              }
+            }
+          ],
+          "entity": [
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "type": "minecraft:skeleton",
+                "nbt": "{Tags:[\"sc\"]}"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "rewards": {
+      "function": "keidoro:sc/efclear"
+    }
+  }
+  

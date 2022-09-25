@@ -1,0 +1,19 @@
+[
+  {
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+      "team": "thief"
+    }
+  },
+  {
+    "condition": "minecraft:match_tool",
+    "predicate": {
+      "items": [
+        "minecraft:emerald"
+      ],
+      "count": 10,
+      "nbt": "{money:1}"
+    }
+  }
+]
