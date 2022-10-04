@@ -36,8 +36,6 @@ execute as @a at @s store result score @s moneyhasbeen run clear @s emerald{mone
 execute if score 時間自動終了 setting matches 1 if score 残り時間 time matches 0 run function keidoro:end
 #ゲームスターと判定の/spawnpoint
 execute if score ゲームスタート ootimescore matches 1 run spawnpoint @a[tag=gmp] 79 52 51
-#ゲーム開始チェストの中身毎回入れ替え
-data merge block -61 60 36 {Items:[{Slot:10b,id:"minecraft:knowledge_book",Count:1b,tag:{display:{Name:'{"text":"大雑把なこのゲームの流れ","color":"reset","italic":false}'},stsr:1}},{Slot:11b,id:"minecraft:writable_book",Count:1b,tag:{display:{Name:'{"text":"このゲームを始める前に...","color":"red","italic":false}'},bgs:1,pages:[""]}},{Slot:12b,id:"minecraft:redstone_torch",Count:1b,tag:{display:{Name:'{"text":"警備員に立候補する","color":"blue","italic":false}'},bac:1,Enchantments:[{}]}},{Slot:13b,id:"minecraft:redstone_torch",Count:1b,tag:{display:{Name:'{"text":"警備員の立候補を取り消す","color":"blue","italic":false}'},nbac:1}},{Slot:14b,id:"minecraft:stone_sword",Count:1b,tag:{display:{Name:'{"text":"警備員を決める（1名ずつ）","color":"aqua","italic":false}',Lore:['{"text":"※Adminタグがないと使用できません。","color":"red","italic":false}']},CustomModelData:1,sg:1}},{Slot:15b,id:"minecraft:goat_horn",Count:1b,tag:{display:{Name:'{"text":"GAME START","color":"gray","italic":false}',Lore:['{"text":"※Adminタグがないと使用できません。","color":"red","italic":false}']},gs:1,instrument:"minecraft:seek_goat_horn"}}]}
 #それぞれの検知
 function keidoro:gschest/execute
 #検知して召喚
