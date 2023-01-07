@@ -1,12 +1,9 @@
 #金10個持ってと脱出可能時間の条件達成で外に出ると脱出するようにする。
-execute if score 残り時間 time matches 120 unless score 残り時間st ootimescore matches 1 run function keidoro:esrp/start
-#脱出する
-#execute if score 脱出可能スコアボード ootimescore matches 1 if predicate keidoro:escape
+execute if score 残り時間 time matches 120 unless score タイマースタート ootimescore matches 1 if score 脱出可能スコアボード ootimescore matches 0 run function keidoro:esrp/start
 #時間処理
 execute if score タイマースタート ootimescore matches 1 run scoreboard players add 残り時間st ootimescore 1
 execute if score タイマースタート ootimescore matches 1 if score 残り時間st ootimescore matches 20 run function keidoro:timer/time
-execute if score 残り時間 time matches 0 run function keidoro:timer/stop
-execute store result bossbar minecraft:time value run scoreboard players get 残り時間 time
+execute if score #time time matches 0 run function keidoro:timer/stop
 #右クリック検知
 execute as @a[nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",tag:{fe:1}}},scores={wfrightclick=1..}] at @s run function keidoro:fire_e/executefire
 execute as @e[type=armor_stand,tag=feas] at @s run scoreboard players add @s festtimest 1
@@ -20,6 +17,8 @@ execute as @e[scores={festtimest=100..}] at @s run function keidoro:fire_e/fires
 execute if score ゲームスタート ootimescore matches 1 if score チェスト更新タイマーst ootimescore matches 1 run function keidoro:timer/chest/chesttime
 #スタミナ設定
 execute if score スタミナ有無 setting matches 1 run function keidoro:running/ra_execute
+#札袋
+execute if score 金袋判定 ootimescore matches 1 as @a[nbt={Inventory:[{id:"minecraft:bundle",tag:{CustomModelData:1,ht:1}}]}] at @s run function keidoro:huutou/kaihuu
 #医療キット使用検知
 execute as @a[nbt={SelectedItem:{id:"minecraft:red_shulker_box",Count:1b,tag:{mk:1}}},predicate=keidoro:shift] at @s run function keidoro:healthkit/mk_particle
 execute as @a[predicate=!keidoro:shift] at @s run scoreboard players reset @s mktime
@@ -28,6 +27,7 @@ execute as @a[scores={mktime=160..}] at @s run function keidoro:healthkit/mk_use
 execute as @a[nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{ed:1}}},scores={wfrightclick=1..}] at @s run function keidoro:energydrink/use
 #テーザー銃
 execute as @a[nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{tg:1}}},scores={wfrightclick=1..}] at @s run function keidoro:taser/shot
+execute as @e[type=arrow,tag=tgar] run function keidoro:taser/killtime
 #死亡処理
 execute as @a[scores={ecdeath=1..}] at @s run function keidoro:prison/inpri
 #hasbeen
@@ -56,12 +56,15 @@ execute as @a[tag=recodash] at @s run function keidoro:gogogo/waitrecovery
 #監視カメラ作っていくよぉぉぉお
 execute as @a[nbt={SelectedItem:{id:"minecraft:warped_fungus_on_a_stick",Count:1b,tag:{sc:1}}},scores={wfrightclick=1..}] at @s run function keidoro:sc/setting
 #監視カメラにマーク。ちなみに倒すとエフェクトクリアされる。
-execute at @e[type=skeleton,tag=sc] as @a[team=thief] if entity @a[distance=..20,team=thief] positioned ~ ~8 ~ if entity @s[distance=..20] run effect give @s glowing 1 0 true
-
-
-
-
-
+execute at @e[type=skeleton,tag=sc] as @a[team=thief] if entity @a[distance=..15,team=thief] positioned ~ ~5 ~ if entity @s[distance=..15] run effect give @s glowing 1 0 true
+#泥棒bossbarに毎tick更新を入れる。
+bossbar set minecraft:time name ["",{"translate":"Time: "},{"score":{"name":"#time","objective":"time"}},{"translate":"s Thief: "},{"score":{"name":"#people","objective":"time"}}]
+#スタミナをアクションバーに
+execute as @a[team=thief] run title @s actionbar ["",{"text":"\u26a1","color": "yellow"},{"translate":"sta","color":"yellow"},{"translate":"mina","color":"aqua"},{"text":"\u26a1","color": "aqua"},{"translate":": ","color": "aqua"},{"score":{"name":"@s","objective":"stamina"},"color":"yellow"}]
+#泥棒タグ持ってるやつをスコアにする。
+execute store result score #people time run execute if entity @a[tag=thief]
+#警備bossbarのtick更新
+bossbar set minecraft:gtime name ["",{"translate":"Time: "},{"score":{"name":"#time","objective":"time"}},{"translate":"sec"}]
 
 
 

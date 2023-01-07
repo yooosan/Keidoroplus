@@ -16,7 +16,7 @@
               "function": "minecraft:set_name",
               "entity": "this",
               "name": {
-                "text": "監視カメラ",
+                "translate": "Security camera",
                 "color": "gray",
                 "italic": false
               }
@@ -24,23 +24,30 @@
             {
               "function": "minecraft:set_lore",
               "lore": [
+                [
+                  {
+                    "keybind": "key.use",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "translate": " to use.",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ],
                 {
-                  "text": "右クリックで設置",
+                  "translate": "Install security cameras.",
                   "color": "white",
                   "italic": false
                 },
                 {
-                  "text": "監視カメラを設置する",
+                  "translate": "If there is a thief within 15 meters, it emits light.",
                   "color": "white",
                   "italic": false
                 },
                 {
-                  "text": "20m以内に泥棒がいたら発光する。",
-                  "color": "white",
-                  "italic": false
-                },
-                {
-                  "text": "※泥棒は監視カメラをぶっ壊すことはできます。",
+                  "translate": "*Thief can destroy security cameras.",
                   "color": "red",
                   "italic": false
                 }
@@ -54,7 +61,7 @@
         },
         {
           "type": "minecraft:item",
-          "weight": 3,
+          "weight": 4,
           "name": "minecraft:warped_fungus_on_a_stick",
           "functions": [
             {
@@ -65,7 +72,7 @@
               "function": "minecraft:set_name",
               "entity": "this",
               "name": {
-                "text": "テーザー銃",
+                "translate": "Taser gun",
                 "color": "yellow",
                 "italic": false
               }
@@ -74,13 +81,25 @@
               "function": "minecraft:set_lore",
               "entity": "this",
               "lore": [
+                [
+                  {
+                    "keybind": "key.use",
+                    "color": "yellow",
+                    "italic": false
+                  },
+                  {
+                    "translate": " to use.",
+                    "color": "yellow",
+                    "italic": false
+                  }
+                ],
                 {
-                  "text": "泥棒をビビっとスタンさせるよ！",
+                  "translate": "Stuns when it hits the thief.",
                   "color": "white",
                   "italic": false
                 },
                 {
-                  "text": "スタン3秒と混乱30秒を与える。",
+                  "translate": "Stuns and confuses the thief it hits for 3 seconds and 10 seconds, respectively.",
                   "color": "white",
                   "italic": false
                 }
@@ -88,16 +107,13 @@
             },
             {
               "function": "minecraft:set_count",
-              "count": {
-                "min": 2,
-                "max": 4
-              }
+              "count": 1
             }
           ]
         },
         {
           "type": "minecraft:item",
-          "weight": 2,
+          "weight": 1,
           "name": "minecraft:stone_axe",
           "functions": [
             {
@@ -108,7 +124,7 @@
               "function": "minecraft:set_name",
               "entity": "this",
               "name": {
-                "text": "手錠",
+                "translate": "handcuffs",
                 "color": "gray",
                 "italic": false
               }
@@ -117,8 +133,20 @@
               "function": "minecraft:set_lore",
               "entity": "this",
               "lore": [
+                [
+                  {
+                    "keybind": "key.attack",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "translate": " to use.",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ],
                 {
-                  "text": "泥棒を一撃であそこいき",
+                  "translate": "One attack on a thief and he goes to jail.",
                   "color": "white",
                   "italic": false
                 }
@@ -126,10 +154,7 @@
             },
             {
               "function": "minecraft:set_count",
-              "count": {
-                "min": 1,
-                "max": 3
-              }
+              "count": 1
             }
           ]
         }

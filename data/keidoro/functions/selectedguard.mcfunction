@@ -11,5 +11,8 @@ give @a[team=thief] warped_fungus_on_a_stick{display:{Name:'{"text":"Bダッシ�
 tellraw @a [{"selector":"@a[team=guard]"},{"text":"\u304c\u8b66\u5099\u54e1\u306b\u306a\u308a\u307e\u3057\u305f\u3002","color":"#009DFA"}]
 scoreboard players set 残り時間 time 1200
 tag @a[team=thief] add ndash
+tag @a[team=thief] add thief
 scoreboard players set @a[team=thief] stamina 160
+bossbar set minecraft:time players @a[team=thief]
+bossbar set minecraft:gtime players @a[team=guard]
 #execute unless score スタミナ有無 setting matches 1 as @a[team=guard] at @s run attribute @s generic.movement_speed base set

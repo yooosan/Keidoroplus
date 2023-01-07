@@ -9,7 +9,7 @@ scoreboard players set ゲームスタート ootimescore 1
 function keidoro:timer/start
 function keidoro:timer/chest/chestloot
 effect give @a[team=guard] resistance 1000000 255 true
-effect give @a[team=guard] saturation 1000000 255 true
+effect give @a saturation 1000000 255 true
 scoreboard players set チェスト更新タイマーst ootimescore 1
 tag @a remove st
 tp @a[team=thief] 33.30 75.00 36.73 7470.21 -0.29
@@ -21,5 +21,6 @@ setblock 56 53 77 minecraft:redstone_block
 setblock 56 54 77 minecraft:redstone_block
 setblock 56 55 77 minecraft:redstone_block
 scoreboard players set @a[team=thief] stamina 160
+scoreboard players set 金袋判定 ootimescore 1
 #開始の音
 playsound minecraft:item.goat_horn.sound.2 master @a ~ ~ ~ 15 1.0
